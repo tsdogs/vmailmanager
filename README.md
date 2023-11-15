@@ -23,8 +23,10 @@ Be sure to have composer
 
 Change the config/db.php (copy the config/db.php.example and change accordingly)
 
+```
 composer install 
 ./yii migrate
+```
 
 Setup apache or nginx and head to: http://Server IP/vmailmanager/
 
