@@ -1,0 +1,14 @@
+/web/.htaccess
+/web/index.php
+/data
+/web/data
+/config/db.php
+/config/params.php
+/web/assets
+/runtime
+/yii
+/yii.bat
+*~
+.git*
+*.kdev4
+*swp
