@@ -1,0 +1,13 @@
+user = <mysql user>
+password = <mysql user password>
+hosts = 127.0.0.1
+dbname = vmail
+query = SELECT a.destination FROM alias a,domain b   WHERE 
+        ((a.username='%u' AND b.domain='%d') 
+           OR  (a.username='' AND b.domain='%d')) AND a.domain = b.destination             AND a.active = '1' and b.active = '1'
+         UNION 
+        SELECT CONCAT(a.username,'@',b.destination) FROM `account` a,domain b
+          WHERE (a.username='%u' AND b.domain='%d')
+          AND a.domain=b.destination AND a.active=1 AND b.active=1;
+
+

@@ -1,0 +1,13 @@
+this is an example configuration,
+Do not use it as is, you sould enable SSL at least
+
+The important part is the database connection (change mysql user and password), and the User Source
+
+N.B. You need to create the sogo_view with the script in this directory after sogo database and user is created
+
+example. 
+
+mysql -u sogousr -p sogo <  sogo_view.sql
+
+TODO: should I move this to the migrations?
+

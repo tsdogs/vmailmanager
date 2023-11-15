@@ -1,15 +1,31 @@
-yii-app-bootstrap-4
+vmailmanager
 ===========
-yii-app-bootstrap-4 is a mixture of Yii 2 Basic and Advanced templates with no backend / frontend separation, but with the database-based user functionality from the advanced template. The other important note is that it is using Bootsrap 4 instead of Boostrap 3. Some additional folders ('components', 'messages') are also added.
+vmailmanager is a Postfix / Dovecot / Sogo Account management web panel. It manages a MySQL User Account database.
+
+SETTING UP THE SERVER
+---------------------
+This guide is one of the best I've found on the internet.
+<https://thomas-leister.de/en/mailserver-debian-stretch/>
+
 
 INSTALLATION
 ------------
-Project can be installed and initialized similarly to the [Yii Advanced Template](https://github.com/yiisoft/yii2-app-advanced/blob/master/docs/guide/start-installation.md).
 
-Installing using Composer
-~~~
-composer create-project -s dev dan-szabo/yii-app-bootstrap-4 folder_name
-~~~
+It's a PHP Yii2 Application. 
+Instructions will be available soon, but basically follow a Yii2 application installation
+You need Apache or Nginx with PHP installed
 
-For preparing the application, [please follow this guide](https://github.com/yiisoft/yii2-app-advanced/blob/master/docs/guide/start-installation.md#preparing-application). **You only need step 2. and 3.** (In step 2. update
-`config/db.php` instead of `common/config/main-local.php`.)
+put this application in some path for the web server to publish it:
+/srv/vmailmanager 
+should be a good choice
+
+Be sure to have composer 
+
+Change the config/db.php (copy the config/db.php.example and change accordingly)
+
+composer install 
+./yii migrate
+
+Setup apache or nginx and head to: http://Server IP/vmailmanager/
+
+Have also a look to the "doc" folder which contains configurations examples for Postfix / Dovecot and Sogo

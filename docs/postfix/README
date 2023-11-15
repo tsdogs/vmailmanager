@@ -1,0 +1,3 @@
+this directory contains example configuration files for postfix
+
+N.B. The main.cf contains only the settings that need to be ADDED to /etc/postfix/main.cf

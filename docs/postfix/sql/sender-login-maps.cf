@@ -1,0 +1,6 @@
+user = <mysql user>
+password = <mysql user password>
+hosts = 127.0.0.1
+dbname = vmail
+query = select concat(username, '@', domain) as 'owns' from account where username = '%u' AND domain = '%d' and active = true union select destination from alias where username = '%u' and domain = '%d' and active = true;
+

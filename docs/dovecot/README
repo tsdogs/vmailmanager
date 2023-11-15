@@ -1,0 +1,3 @@
+this is the dovecot configuration part that's needed for authentication.
+Need to change mysql user and mysql user password in the configuration
+this is still an example

@@ -1,0 +1,16 @@
+# this should be added to the /etc/postfix/main.cf
+
+### Conditions in which Postfix accepts e-mails as recipient (additional to relay conditions)
+### check_recipient_access checks if an account is "sendonly"
+smtpd_recipient_restrictions =
+        check_recipient_access mysql:/etc/postfix/sql/recipient-access.cf
+        check_sender_access mysql:/etc/postfix/sql/sender-access.cf
+##
+## MySQL queries
+##
+
+virtual_alias_maps = mysql:/etc/postfix/sql/aliases.cf
+virtual_mailbox_maps = mysql:/etc/postfix/sql/accounts.cf
+virtual_mailbox_domains = mysql:/etc/postfix/sql/domains.cf
+local_recipient_maps = $virtual_mailbox_maps
+

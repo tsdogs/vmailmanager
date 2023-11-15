@@ -1,0 +1,5 @@
+this files should be placed in /etc/postfix/sql
+
+change the mysql user, mysql user password, eventually host and database name in each of the files.
+
+TODO: find a way to have a common file for mysql configuration

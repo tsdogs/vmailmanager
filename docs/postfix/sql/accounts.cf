@@ -1,0 +1,6 @@
+user = <mysql user>
+password = <mysql user password>
+hosts = 127.0.0.1
+dbname = vmail
+query = select 1 as found from account a,domain b where a.domain=b.destination AND a.username = '%u' and b.domain = '%d' and a.active = 1 AND b.active=1 LIMIT 1;
+

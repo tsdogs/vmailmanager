@@ -36,11 +36,6 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
     ];
-    $config ['controllerMap'] = [
-        'migration' => [
-            'class' => 'bizley\migration\controllers\MigrationController',
-        ],
-    ];
 }
 
 return $config;

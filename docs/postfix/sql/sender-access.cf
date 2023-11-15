@@ -1,0 +1,6 @@
+user = <mysql user>
+password = <mysql user password>
+hosts = 127.0.0.1
+dbname = vmail
+query = select if(send = false, 'REJECT', 'OK') AS access from account where username = '%u' and domain = '%d' and active = true LIMIT 1;
+
